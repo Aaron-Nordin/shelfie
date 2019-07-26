@@ -6,10 +6,11 @@ export default class Product extends Component {
         // console.log(this.props)
         return (
             <div>
-                Product
-                {this.props.item.product_name}
-                {this.props.item.product_price}
-                <img src={this.props.item.product_image} alt=""/>
+                <div className="product-box">
+                    {this.props.item.product_name}
+                    {this.props.item.product_price}
+                    <img src={this.props.item.product_image} alt=""/>
+                </div>
             </div>
         )
     }

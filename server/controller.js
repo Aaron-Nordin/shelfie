@@ -1,6 +1,5 @@
 module.exports = {
     getItems:  (req,res) => {
-        console.log("backend")
         const db = req.app.get('db')
         db.get_inventory().then(allproducts => {
             res.status(200).send(allproducts)
