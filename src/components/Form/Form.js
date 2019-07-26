@@ -13,7 +13,7 @@ export default class Form extends Component {
     this.addNewProduct = this.addNewProduct.bind(this);
   }
 
-  addNewProduct() {
+  addNewProduct= () => {
     let product_name = this.state.productName
     let product_price = this.state.productPrice
     let product_image = this.state.productImage
