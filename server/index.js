@@ -4,7 +4,14 @@ const massive = require("massive");
 const controller = require("./controller");
 require("dotenv").config();
 
+app.use(express.json())
+
 const { SERVER_PORT, CONNECTION_STRING } = process.env;
+
+app.get('/api/inventory', controller.getItems)
+app.post('/api/inventory', controller.createItem)
+
+
 
 massive(CONNECTION_STRING)
   .then(dbInstance => {
