@@ -10,6 +10,7 @@ const { SERVER_PORT, CONNECTION_STRING } = process.env;
 
 app.get('/api/inventory', controller.getItems)
 app.post('/api/inventory', controller.createItem)
+app.delete('/api/inventory/:id', controller.delete)
 
 
 

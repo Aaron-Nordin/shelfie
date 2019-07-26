@@ -14,13 +14,11 @@ export default class Form extends Component {
   }
 
   addNewProduct() {
-    const {
-      productName: product_name,
-      productPrice: product_price,
-      productImage: product_image
-    } = this.state;
+    let product_name = this.state.productName
+    let product_price = this.state.productPrice
+    let product_image = this.state.productImage
     axios
-      .post("/api/inventory", { product_name, product_price, product_image })
+      .post("/api/inventory", { product_name, product_price, product_image} )
       .then(this.props.getInventory());
     this.cancel();
   }
